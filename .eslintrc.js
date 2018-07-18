@@ -9,7 +9,12 @@ module.exports = {
     '@vue/typescript'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-console': 'off',
+    'no-debugger': 'off',
+    'vue/attribute-hyphenation': [
+      'error',
+      'always'
+    ],
+    'vue/html-end-tags': 'error'
   }
 }
