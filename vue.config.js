@@ -22,7 +22,7 @@ module.exports = {
     // 查阅 https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli-service.md#配置代理
     proxy: {
       '/': {
-        target: 'http://localhost:8080',
+        target: 'http://localhost:8888',
         changeOrigin: true,
         ws: false,
         pathRewrite: {

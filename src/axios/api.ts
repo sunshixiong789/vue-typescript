@@ -8,8 +8,8 @@ export function restRequest(url: string, method: string, params: any) {
     method: `${method}`,
     data: params,
     headers: {
-      'Content-Type': 'application/json',
-    },
+      'Content-Type': 'application/json'
+    }
   });
 }
 
@@ -19,7 +19,7 @@ export function formRequest(url: string, method: string, params: any) {
     method: `${method}`,
     params: {params},
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-    },
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
   });
 }

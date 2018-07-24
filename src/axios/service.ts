@@ -3,7 +3,7 @@ import {Message, MessageBox} from "element-ui";
 
 /** 创建axios实例 */
 const service = axios.create({
-  timeout: 15000, // 请求超时时间
+  timeout: 15000 // 请求超时时间
 });
 /** request拦截器 */
 service.interceptors.request.use((config) => {
@@ -13,7 +13,7 @@ service.interceptors.request.use((config) => {
   Message({
     message: '请求超时!',
     type: 'error',
-    center: true,
+    center: true
   });
   Promise.reject(error);
 });
@@ -30,7 +30,7 @@ service.interceptors.response.use(
         Message({
           message: '服务器错误',
           type: 'error',
-          duration: 5 * 1000,
+          duration: 5 * 1000
         });
         return Promise.reject(new Error('error'));
       } else {
@@ -44,6 +44,6 @@ service.interceptors.response.use(
         Message({message: '权限不足,请联系管理员!', type: 'error'});
       }
       return Promise.reject(error);
-    },
+    }
 );
 export default service;
